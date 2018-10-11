@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <style>
+    * { border: 2px solid #dedede; padding: 15px; margin: 15px; }
+    html { margin: 0; padding: 0; }
+    body { max-width: 600px; font-family: sans-serif; color: #333; }
+  </style>
+    <script src="main.js"></script>
+</head>
+<body>
+<h1 onClick="Traverse()">Sherlock</h1>
+<p >Full Cast</p>
+<h2 >Main Characters</h2>
+<ul>
+    <li>Sherlock</li>
+    <li>Irene Adler</li>
+    <li>John Hamish Watson</li>
+</ul>
+</body>
+
+<script>
+  function walk(node, callback) {
+      callback(node);     
+      for (var i = 0; i < node.childNodes.length; i++) {
+       walk(node.childNodes[i], callback);
+      }
+    }
+    walk(document.body, function (node) {
+      console.log(node.nodeName);
+    });
+  
+</script>
+</body>
+</html>
+
+
