@@ -15,4 +15,3 @@ A website to demonstrate walking the DOM.
 
 #### Known Bugs
 1. No known bugs.
-2. 
